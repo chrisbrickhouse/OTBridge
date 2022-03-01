@@ -1,15 +1,19 @@
 # OTBridge
-A program to simplify running OTSoft on linux. It might work on Mac, but I haven't tested it. This guide assumes that if you are running OTSoft on linux, you know enough to trouble shoot minor problems yourself. That said, it can be improved so feel free to submit issues or patches.
+A program to simplify running [OTSoft](https://linguistics.ucla.edu/people/hayes/otsoft/) on linux. It might work on Mac, but I haven't tested it. This guide assumes that if you are running OTSoft on linux, you know enough to trouble shoot minor problems yourself. That said, it can be improved so feel free to submit issues or patches.
 
-##Prerequisites
-The program requires `wine`, `make` and `unix2dos` in order to function. These should be available from your package manager.
+## Prerequisites
+The program requires `wine`, `make` and `dos2unix` in order to function. These should be available from your package manager. An example for Debian would be:
+
+```
+sudo apt install wine dos2unix make
+```
 
 It also requires a working version of OTSoft running under wine. Depending on your machine this may be simple or difficult, but this guide assumes you have already figured out how to get the program running.
 
-##Installation
+## Installation
 The program is a Makefile that you place in the OTSoft directory. Installation is as simple as downloading the file.
 
-##Quick start
+## Quick start
 To start, you will need a constraint file saved as a CSV. Throughout the file we use `NAME` to identify this and related files and it refers to the filename without the file extension.
 
 The Makefile has three recipes.
@@ -20,5 +24,5 @@ The Makefile has three recipes.
 
 `make run` is a wrapper for running OTSoft.
 
-##License
+## License
 This software is licensed to you under the terms of the BSD 3-clause license. See LICENSE for further details.
